@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/box"
+        android:id="@+id/uc_box"
         android:layout_width="410dp"
         android:layout_height="93dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -16,45 +16,46 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/classroom_no"
+        android:id="@+id/uc_classroom_no"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/box"
+        app:layout_constraintStart_toStartOf="@+id/uc_box"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/time_remaining"
+        android:id="@+id/uc_time_remaining"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#4CAF50"
+        android:textColor="#FF0000"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/box"
-        app:layout_constraintStart_toEndOf="@+id/classroom_no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/uc_classroom_no"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/until_label"
+        android:id="@+id/uc_duration_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="5dp"
-        android:text="Until:"
-        android:textColor="#FF0000"
+        android:text="@string/duration"
+        android:textColor="#4CAF50"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/until_time" />
+        app:layout_constraintEnd_toStartOf="@+id/uc_duration_time"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
-        android:id="@+id/until_time"
+        android:id="@+id/uc_duration_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
-        android:textColor="#FF0000"
+        android:textColor="#4CAF50"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/box" />
+        app:layout_constraintEnd_toEndOf="@+id/uc_box" />
 </androidx.constraintlayout.widget.ConstraintLayout>

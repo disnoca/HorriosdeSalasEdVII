@@ -1,12 +1,9 @@
 package com.example.horriosdesalasedvii.classroom;
 
-import com.example.horriosdesalasedvii.MainActivity;
-import com.example.horriosdesalasedvii.TimeFunctions;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Classroom implements Comparable<Classroom> {
+public class Classroom {
 
     private final String classroom_id;
 
@@ -47,13 +44,8 @@ public class Classroom implements Comparable<Classroom> {
         return getNextClassBlock(weekdaypos+1, 0);
     }
 
-    @Override
-    public int compareTo(Classroom c) {
-        int minutes_until1 = TimeFunctions.minutesUntil(getNextClassBlock(MainActivity.weekday()-1, MainActivity.timeInMinutes()));
-        int minutes_until2 = TimeFunctions.minutesUntil(c.getNextClassBlock(MainActivity.weekday()-1, MainActivity.timeInMinutes()));
-
-        if(minutes_until1 > minutes_until2) return -1;
-        if(minutes_until1 < minutes_until2) return 1;
-        return 0;
+    public ClassBlock getClassBlockAfter(ClassBlock classBlock) {
+        return getNextClassBlock(classBlock.getWeekday()-1, classBlock.getEndTime());
     }
+
 }

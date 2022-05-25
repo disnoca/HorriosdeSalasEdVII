@@ -1,4 +1,4 @@
-package com.example.horriosdesalasedvii;
+package com.example.horriosdesalasedvii.RecyclerAdapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,16 +8,19 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.horriosdesalasedvii.MainActivity;
+import com.example.horriosdesalasedvii.R;
+import com.example.horriosdesalasedvii.TimeFunctions;
 import com.example.horriosdesalasedvii.classroom.ClassBlock;
 import com.example.horriosdesalasedvii.classroom.Classroom;
 
 import java.util.ArrayList;
 
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyViewHolder> {
+public class AvailableClassroomsRecyclerAdapter extends RecyclerView.Adapter<AvailableClassroomsRecyclerAdapter.MyViewHolder> {
 
     private final ArrayList<Classroom> availableClassrooms;
 
-    public RecyclerAdapter(ArrayList<Classroom> allClassrooms) {
+    public AvailableClassroomsRecyclerAdapter(ArrayList<Classroom> allClassrooms) {
         this.availableClassrooms = allClassrooms;
     }
 
@@ -28,29 +31,29 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
 
         public MyViewHolder(final View view) {
             super(view);
-            classroom_text = view.findViewById(R.id.classroom_no);
-            remaining_text = view.findViewById(R.id.time_remaining);
-            until_text = view.findViewById(R.id.until_time);
+            classroom_text = view.findViewById(R.id.ac_classroom_no);
+            remaining_text = view.findViewById(R.id.ac_time_remaining);
+            until_text = view.findViewById(R.id.ac_until_time);
         }
     }
 
 
     @NonNull
     @Override
-    public RecyclerAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_items, parent, false);
+    public AvailableClassroomsRecyclerAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.available_classrooms_list, parent, false);
         return new MyViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull AvailableClassroomsRecyclerAdapter.MyViewHolder holder, int position) {
         Classroom classroom = availableClassrooms.get(position);
-            ClassBlock class_block = classroom.getNextClassBlock(MainActivity.weekday()-1, MainActivity.timeInMinutes());
+        ClassBlock class_block = classroom.getNextClassBlock(MainActivity.weekday()-1, MainActivity.timeInMinutes());
 
         String classroom_id = classroom.getClassroomId();
         holder.classroom_text.setText(classroom_id);
 
-        int[] remaining_time = TimeFunctions.minutesToHours(TimeFunctions.minutesUntil(class_block));
+        int[] remaining_time = TimeFunctions.minutesToHours(TimeFunctions.minutesUntil(class_block.getWeekday(), class_block.getStartTime()));
         holder.remaining_text.setText(getRemainingTimeText(remaining_time));
 
         int[] until_time = TimeFunctions.minutesToHours(class_block.getStartTime());

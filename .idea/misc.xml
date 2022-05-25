@@ -6,10 +6,15 @@
         <entry key="..\:/Users/samue/AndroidStudioProjects/HorriosdeSalasEdVII/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.196" />
         <entry key="..\:/Users/samue/AndroidStudioProjects/HorriosdeSalasEdVII/app/src/main/res/drawable/ic_launcher_background.xml" value="0.196" />
         <entry key="..\:/Users/samue/AndroidStudioProjects/HorriosdeSalasEdVII/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/HorriosdeSalasEdVII/app/src/main/res/layout/available_classrooms_list.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/HorriosdeSalasEdVII/app/src/main/res/layout/available_classrooms_view.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/samue/AndroidStudioProjects/HorriosdeSalasEdVII/app/src/main/res/layout/list_items.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/samue/AndroidStudioProjects/HorriosdeSalasEdVII/app/src/main/res/layout/mymenu.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/samue/AndroidStudioProjects/HorriosdeSalasEdVII/app/src/main/res/layout/popup_window.xml" value="0.25" />
         <entry key="..\:/Users/samue/AndroidStudioProjects/HorriosdeSalasEdVII/app/src/main/res/layout/recycler_view.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/HorriosdeSalasEdVII/app/src/main/res/layout/upcoming_classrooms_list.xml" value="0.365625" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/HorriosdeSalasEdVII/app/src/main/res/layout/upcoming_classrooms_view.xml" value="0.365625" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/HorriosdeSalasEdVII/app/src/main/res/layout/viewpager_item.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/samue/AndroidStudioProjects/HorriosdeSalasEdVII/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.196" />
       </map>
     </option>

@@ -3,4 +3,8 @@
     <string name="disclaimer_title">Disclaimer</string>
     <string name="disclaimer_text">\n \n A informação e horários mostrados nesta aplicação são os mesmos horários que conseguem encontrar à porta das salas. Não há garantias que as salas não estejam a ter aulas. A aplicação é feita apenas para não estar a gastar tempo à procura de uma sala livre para estudar.
         \n \n Não estão incluídas:\n - As salas dos andares superiores do lado esquero do edifício\n- Salas que não tenham hórarios nas portas\n - A sala 1.8, que está quase sempre livre mas costuma estar trancada\n - A sala 3.2 que está aberta 24H por dia para uso de portáteis\n</string>
+    <string name="until">Until:</string>
+    <string name="duration">Availability Duration:</string>
+    <string name="available">Available</string>
+    <string name="upcoming">Upcoming</string>
 </resources>
